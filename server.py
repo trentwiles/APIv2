@@ -52,8 +52,9 @@ def b():
     total = rx + tx
     divide = 1024*3
     all_bandwidth = round(total/1073741824, 2)
-    all_bandwidth_tb = all_bandwidth/1024
-    return json.dumps({"total_bandwidth": {"GB": all_bandwidth, "TB": all_bandwidth_tb}})
+    all_bandwidth_tb = round(all_bandwidth/1024,2)
+    all_bandwidth_pb = round(all_bandwidth_tb/1024,2)
+    return json.dumps({"total_bandwidth": {"GB": all_bandwidth, "TB": all_bandwidth_tb, "PB": all_bandwidth_pb}})
 
 @app.route('/api/v1/apache')
 def apache():
