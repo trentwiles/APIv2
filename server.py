@@ -1,12 +1,15 @@
 from flask import Flask
 from flask import make_response, send_file
+from flask_cors import CORS, cross_origin
 
 import requests
 import json
 import subprocess
 
 app = Flask(__name__)
- 
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
+
 @app.route('/')
 def home():
     return json.dumps({"status": "ok"})
