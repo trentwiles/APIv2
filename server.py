@@ -58,7 +58,7 @@ def b():
 @app.route('/api/v1/apache')
 def apache():
 
-    web_server = "nginx" # CHANGE THIS TO THE WEB SERVER!!!
+    web_server = "apache2" # CHANGE THIS TO THE WEB SERVER!!!
 
     result = subprocess.run(['wc', '-l', '/var/log/' + web_server + '/access.log'], stdout=subprocess.PIPE)
     l = result.stdout.decode('utf-8')
