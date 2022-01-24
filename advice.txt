@@ -10,3 +10,4 @@ Don't ask the internet for relationship advice.
 Need to download a YouTube video? Check out "youtube-dl".
 VPNs aren't as useful as you may think.
 Keep your wifi router updated.
+Why not help preserve the internet while your computer is idle? Check out "archive team warrior".
